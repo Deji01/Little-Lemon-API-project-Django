@@ -133,7 +133,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
     'rest_framework.authentication.TokenAuthentication',
-    'rest_framework.authentication.SessionAuthentication',
+    # 'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': [
     'rest_framework.filters.OrderingFilter',
@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 
     'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 3,
+    'PAGE_SIZE': 5,
     'DEFAULT_THROTTLE_CLASSES': [
     'rest_framework.throttling.AnonRateThrottle',
     'rest_framework.throttling.UserRateThrottle',
@@ -160,4 +160,5 @@ CSRF_TRUSTED_ORIGINS = [
     "https://deji01-improved-meme-p649j47vgrp26p65-8000.preview.app.github.dev",
     "https://preview.app.github.dev",    
     "https://github.dev",
+    "http://localhost",
     ]

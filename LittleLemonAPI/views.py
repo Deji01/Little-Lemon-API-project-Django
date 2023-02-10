@@ -9,7 +9,7 @@ from rest_framework.throttling import UserRateThrottle, AnonRateThrottle
 
 
 class MenuItemView(generics.ListAPIView, generics.ListCreateAPIView):
-    queryset = MenuItem.objects.all()
+    queryset = MenuItem.objects.all().order_by('id')
     serializer_class = MenuItemSerializer
     ordering_fields = ['price']
     search_fields = ['title']
