@@ -7,7 +7,7 @@ Little Lemon API Project. Django
 pipenv shell
 
 # install django
-pipenv install django
+pipenv install django djangorestframework
 
 # start django project
 django-admin startproject LittleLemon .
@@ -16,9 +16,9 @@ django-admin startproject LittleLemon .
 python3 manage.py startapp LittleLemonAPI
 ```
 ## Steps Taken
-- Add LittleLemonAPI to INSTALLED_APPS in settings.
-- Create models
-- Add Changes to Database
+1. Add `LittleLemonAPI` & `rest_framework` to `INSTALLED_APPS` in `settings.py`.
+2. Create models
+3. Add Changes to Database
 ```bash
 python3 manage.py makemigrations
 python3 manage.py migrate
