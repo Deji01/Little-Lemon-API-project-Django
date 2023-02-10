@@ -1,7 +1,7 @@
 from .models import Cart, MenuItem, Order, OrderItem
 from .serializers import UserSerializer, CartSerializer, MenuItemSerializer, OrderSerializer, OrderItemSerializer
 from decimal import Decimal
-from django.contib.auth.models import User, Group
+from django.contrib.auth.models import User, Group
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 from rest_framework.response import Response
@@ -78,7 +78,7 @@ class SinlgeDeliveryCrewView(generics.RetrieveDestroyAPIView):
         return queryset
 
 
-class CustomerCartView(generics.ListCreatAPIView):
+class CustomerCartView(generics.ListCreateAPIView):
     serializer_class = CartSerializer
     permission_classes = [IsAuthenticated]
 
