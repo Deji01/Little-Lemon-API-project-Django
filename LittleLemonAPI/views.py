@@ -87,10 +87,9 @@ class CustomerCartView(generics.ListCreateAPIView):
         return Cart.objects.filter(user=user)
 
     def perform_create(self, serializer):
-        menuitem = self.request.data.get('menuitem')
         quantity = int(self.request.data.get('quantity'))
-        unit_price = self.request.data.get(pk=menuitem).price
-        price = unit_price * quantity
+        unit_price = self.request.data.get('unit_price')
+        price = float(unit_price) * int(quantity)
         serializer.save(user=self.request.user, price=price)
 
     def delete(self, request):
