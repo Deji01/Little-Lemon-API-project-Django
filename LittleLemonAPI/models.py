@@ -6,6 +6,9 @@ class Category(models.Model):
     slug = models.SlugField()
     title = models.CharField(max_length=255, db_index=True)
 
+    class Meta:
+        verbose_name_plural = "categories"
+
     def __str__(self) -> str:
         return self.title
 
@@ -52,4 +55,4 @@ class OrderItem(models.Model):
         unique_together = ('order', 'menuitem')
 
     def __str__(self) -> str:
-        return f"{self.order.user} - {self.menuitem.title}"
+        return f"{self.quantity} - {self.menuitem}"
