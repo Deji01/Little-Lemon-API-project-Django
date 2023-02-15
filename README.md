@@ -26,5 +26,10 @@ python3 manage.py startapp LittleLemonAPI
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
+4. Run Development Web Server
+
+```bash
+python3 manage.py runserver
+```
 ## NOTE 
 Throttling was setup
