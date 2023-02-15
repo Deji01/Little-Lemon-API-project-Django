@@ -26,3 +26,5 @@ python3 manage.py startapp LittleLemonAPI
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
+## NOTE 
+Throttling was setup
